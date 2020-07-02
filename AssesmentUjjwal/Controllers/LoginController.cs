@@ -23,7 +23,7 @@ namespace AssesmentUjjwal.Controllers
         }
         void connectionString()
         {
-            con.ConnectionString = @"data source=192.168.1.201\SQLEXPRESS;user id=sa;password=admin123;database=AssesmentUjjwal;";
+            con.ConnectionString = @"data source=.\sqlcelect;integrated security=true;database=AssesmentUjjwal;";
         }
         [HttpPost]
         public ActionResult Validate(LoginModel login)
