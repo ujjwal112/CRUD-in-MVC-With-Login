@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AssesmentUjjwalModelStoreContainer" CdmEntityContainer="AssesmentUjjwalEntities">
+    <EntitySetMapping Name="AU_TL_LoginDeatils">
+      <EntityTypeMapping TypeName="AssesmentUjjwalModel.AU_TL_LoginDeatils">
+        <MappingFragment StoreEntitySet="AU_TL_LoginDeatils">
+          <ScalarProperty Name="aUserId" ColumnName="aUserId" />
+          <ScalarProperty Name="vUserName" ColumnName="vUserName" />
+          <ScalarProperty Name="nvPassword" ColumnName="nvPassword" />
+          <ScalarProperty Name="bActive" ColumnName="bActive" />
+          <ScalarProperty Name="bDeleted" ColumnName="bDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

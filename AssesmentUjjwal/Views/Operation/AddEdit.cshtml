@@ -1,0 +1,66 @@
+﻿@model AssesmentUjjwal.Models.AU_TL_UserDetails
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("AddEdit", "Operation", FormMethod.Post,new { onsubmit="return submitForm(this)"}))
+{
+    @Html.HiddenFor(model => model.aUserId)
+    <div class="form-row">
+        <div class="col-md-12">
+            <div class="position-relative form-group">
+                <label for="exampleText1" class="">User Id</label>
+                @Html.EditorFor(model => model.vUserId, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enetr your company user id" } })
+                @Html.ValidationMessageFor(model => model.vUserId)
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-12">
+            <div class="position-relative form-group">
+                <label for="exampleText1" class="">User Name</label>
+                @Html.EditorFor(model => model.vFullName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your name" } })
+                @Html.ValidationMessageFor(model => model.vFullName)
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-12">
+            <div class="position-relative form-group">
+                <label for="exampleText1" class="">Mobile Number</label>
+                @Html.EditorFor(model => model.vMobile, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your mobile number" } })
+                @Html.ValidationMessageFor(model => model.vMobile)
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-12">
+            <div class="position-relative form-group">
+                <label for="exampleText1" class="">Age</label>
+                @Html.EditorFor(model => model.iAge, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.iAge)
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-12">
+            <div class="position-relative form-group">
+                <label for="exampleText1" class="">Salary</label>
+                <div class="input-group">
+                    <div class="input-group-prepend"><span class="input-group-text" id="inputGroupPrepend4">₹</span></div>
+                    @Html.EditorFor(model => model.iSalary, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-row mt-4">
+        <div class="col-md-6">
+            <div class="position-relative form-group">
+                <input type="submit" name="name" value="Save" class="mt-2 btn btn-success" />
+                <input type="reset" name="name" value="Clear" class="mt-2 btn btn-danger" />
+            </div>
+        </div>
+    </div>
+}

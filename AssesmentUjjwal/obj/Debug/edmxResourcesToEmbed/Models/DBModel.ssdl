@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AssesmentUjjwalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AU_TL_UserDetails">
+    <Key>
+      <PropertyRef Name="aUserId" />
+    </Key>
+    <Property Name="aUserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vUserId" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="vFullName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="vMobile" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="iAge" Type="int" Nullable="false" />
+    <Property Name="iSalary" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="AssesmentUjjwalModelStoreContainer">
+    <EntitySet Name="AU_TL_UserDetails" EntityType="Self.AU_TL_UserDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
